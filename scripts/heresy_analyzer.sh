@@ -7,5 +7,5 @@ set -eou pipefail
 
 readonly LOG_FILE="$1"
 
-echo "++ [Acolyte's Analysis] Scanning target: ${LOG_FILE} ++"
+echo "++ [Standardized Acolyte Analysis] Commencing analysis of target: ${LOG_FILE} ++"
 grep "ERROR" "${LOG_FILE}"
