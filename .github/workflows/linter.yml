@@ -1,0 +1,18 @@
+name: Shell Script Linter
+
+on:
+  push:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  shellcheck:
+    name: Shellcheck Runner
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Run ShellCheck
+        uses: ludeeus/action-shellcheck@2.0.0
