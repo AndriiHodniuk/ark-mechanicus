@@ -6,7 +6,7 @@ set -eou pipefile
 # This function adds two numbers
 
 function add() {
-    echo "$(($1 + $2))"
+    echo "$(($1  -  $2))"
 }
 
 RESULT=$(add 5 5)
