@@ -1,11 +1,16 @@
 #!/bin/bash
-
-set -eou pipefail
-
-# --- Automated Heresy Analyzer ---
-# This script scans a given file for lines containing "ERROR".
+set -euo pipefail
 
 readonly LOG_FILE="$1"
 
-echo "++ [Standardized Acolyte Analysis] Commencing analysis of target: ${LOG_FILE} ++"
-grep "ERROR" "${LOG_FILE}"
+echo "++ Heresy Analyzer activated. Monitoring ${LOG_FILE}... ++"
+
+while true; do
+  if [ -f "${LOG_FILE}" ]; then
+    echo "--- [$(date)] Running analysis ---"
+    grep "ERROR" "${LOG_FILE}" || true
+  else
+    echo "--- [$(date)] Log file not found. Awaiting data transmission... ---"
+  fi
+  sleep 10
+done

@@ -1,0 +1,16 @@
+services:
+  log-generator:
+    image: alpine:latest
+    command: >
+      sh -c "while true; do echo \"$(date): INFO: All systems nominal.\" >> /data/system.log; sleep 5; echo \"$(date): ERROR: Random data-heresy detected.\" >> /data/system.log; sleep 5; done"
+    volumes:
+      - log-data:/data
+  heresy-analyzer:
+    build: .
+    depends_on:
+      - log-generator
+    command: [ "/data/system.log" ]
+    volumes:
+      - log-data:/data
+volumes:
+  log-data:
