@@ -2,7 +2,7 @@
 
 set -eou pipefile
 
-# Simple calculator
+# Advanced STC Calculator
 # This function adds two numbers
 
 function add() {
