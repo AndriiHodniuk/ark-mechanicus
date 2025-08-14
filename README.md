@@ -5,6 +5,9 @@ This repository serves as the sacred Ark Mechanicus, a chronicle of my journey t
 
 ## Current Status
 **Spiral 1: Awakening the Machine Spirit** - Complete.
+**Spiral 2: Litany of Branches and Hieroglyphs** - Complete.
+**Spiral 3: Ritual of Automation and Reconciliation** - Complete.
+**Spiral 4: Consecration of the Ark and Grand Strategy** - In Progress...
 The foundational rites have been performed. The Ark has been initialised and consecrated in the great forges of GitHub.
 
 ## Tech Stack
